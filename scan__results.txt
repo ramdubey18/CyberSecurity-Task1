@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="file:///A:/nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -sS -p 1-65535 -T4 -A -v nmap 10.95.159.136" profile_name="Intense scan, all TCP ports" scanner="nmap" start="1754288497" startstr="Mon Aug  4 11:51:37 2025" version="7.97" xmloutputversion="1.04"><scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"></scaninfo><verbose level="1"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.97 ( https://nmap.org ) at 2025-08-04 11:51 +0530
+NSE: Loaded 158 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 11:51
+Completed NSE at 11:51, 0.00s elapsed
+Initiating NSE at 11:51
+Completed NSE at 11:51, 0.00s elapsed
+Initiating NSE at 11:51
+Completed NSE at 11:51, 0.00s elapsed
+Initiating Parallel DNS resolution of 1 host. at 11:51
+Completed Parallel DNS resolution of 1 host. at 11:51, 2.03s elapsed
+Initiating System DNS resolution of 1 host. at 11:51
+Completed System DNS resolution of 1 host. at 11:51, 2.69s elapsed
+Failed to resolve "nmap".
+Initiating Parallel DNS resolution of 1 host. at 11:51
+Completed Parallel DNS resolution of 1 host. at 11:51, 0.52s elapsed
+Initiating SYN Stealth Scan at 11:51
+Scanning 10.95.159.136 [65535 ports]
+Discovered open port 139/tcp on 10.95.159.136
+Discovered open port 445/tcp on 10.95.159.136
+Discovered open port 135/tcp on 10.95.159.136
+Discovered open port 49665/tcp on 10.95.159.136
+Discovered open port 49664/tcp on 10.95.159.136
+Discovered open port 49679/tcp on 10.95.159.136
+Discovered open port 6850/tcp on 10.95.159.136
+Discovered open port 9012/tcp on 10.95.159.136
+Discovered open port 49667/tcp on 10.95.159.136
+Discovered open port 9013/tcp on 10.95.159.136
+Discovered open port 5040/tcp on 10.95.159.136
+Discovered open port 49666/tcp on 10.95.159.136
+Discovered open port 49668/tcp on 10.95.159.136
+Completed SYN Stealth Scan at 11:51, 3.78s elapsed (65535 total ports)
+Initiating Service scan at 11:51
+Scanning 13 services on 10.95.159.136
+Service scan Timing: About 53.85% done; ETC: 11:53 (0:00:45 remaining)
+Completed Service scan at 11:53, 83.86s elapsed (13 services on 1 host)
+Initiating OS detection (try #1) against 10.95.159.136
+Retrying OS detection (try #2) against 10.95.159.136
+Retrying OS detection (try #3) against 10.95.159.136
+Retrying OS detection (try #4) against 10.95.159.136
+Retrying OS detection (try #5) against 10.95.159.136
+NSE: Script scanning 10.95.159.136.
+Initiating NSE at 11:53
+Completed NSE at 11:53, 14.30s elapsed
+Initiating NSE at 11:53
+NSOCK ERROR [118.0380s] poll_loop(): nsock_loop error 10022: An invalid argument was supplied. 
+NSE: Script Engine Scan Aborted.
+An error was thrown by the engine: A:\nmap/nse_main.lua:1078: a fatal error occurred in nsock_loop
+stack traceback:
+	[C]: in function 'nmap.socket.loop'
+	A:\nmap/nse_main.lua:1078: in upvalue 'run'
+	A:\nmap/nse_main.lua:1488: in function &lt;A:\nmap/nse_main.lua:1435&gt;
+	[C]: in ?
+Nmap scan report for 10.95.159.136
+Host is up (0.00046s latency).
+Not shown: 65521 closed tcp ports (reset)
+PORT      STATE    SERVICE       VERSION
+135/tcp   open     msrpc         Microsoft Windows RPC
+137/tcp   filtered netbios-ns
+139/tcp   open     netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp   open     microsoft-ds?
+5040/tcp  open     unknown
+6850/tcp  open     iccrushmore?
+9012/tcp  open     ssl/websocket WebSocket++ 0.8.2
+| ssl-cert: Subject: commonName=Peter Thorson/organizationName=Zaphoyd Studios/stateOrProvinceName=Illinois/countryName=US
+| Issuer: commonName=Peter Thorson/organizationName=Zaphoyd Studios/stateOrProvinceName=Illinois/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2011-11-15T21:20:06
+| Not valid after:  2012-11-14T21:20:06
+| MD5:     fe49 23f5 2b50 6c58 5d19 0c0d 0176 daa7
+| SHA-1:   8c44 2ddf d594 5b22 204c 17d0 375a a8ef 6956 ce8d
+|_SHA-256: 300d b4cc ea08 d17b 6db8 d6ac 6a38 d062 095a 747b 83ee e122 c3c9 1ddf da6e 6495
+9013/tcp  open     websocket     WebSocket++ 0.8.2
+49664/tcp open     msrpc         Microsoft Windows RPC
+49665/tcp open     msrpc         Microsoft Windows RPC
+49666/tcp open     msrpc         Microsoft Windows RPC
+49667/tcp open     msrpc         Microsoft Windows RPC
+49668/tcp open     msrpc         Microsoft Windows RPC
+49679/tcp open     msrpc         Microsoft Windows RPC
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.97%E=4%D=8/4%OT=135%CT=1%CU=39492%PV=Y%DS=0%DC=L%G=Y%TM=689051E
+OS:7%P=i686-pc-windows-windows)SEQ(SP=103%GCD=1%ISR=105%TI=I%CI=I%II=I%SS=S
+OS:%TS=A)SEQ(SP=103%GCD=2%ISR=109%TI=I%CI=I%II=I%SS=S%TS=A)SEQ(SP=104%GCD=1
+OS:%ISR=108%TI=I%CI=I%II=I%SS=S%TS=A)SEQ(SP=F6%GCD=1%ISR=10C%TI=I%CI=I%II=I
+OS:%SS=S%TS=A)SEQ(SP=FE%GCD=1%ISR=10E%TI=I%CI=I%II=I%SS=S%TS=A)OPS(O1=MFFD7
+OS:NW8ST11%O2=MFFD7NW8ST11%O3=MFFD7NW8NNT11%O4=MFFD7NW8ST11%O5=MFFD7NW8ST11
+OS:%O6=MFFD7ST11)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FFFF)ECN(R=
+OS:Y%DF=Y%T=40%W=FFFF%O=MFFD7NW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%
+OS:RD=0%Q=)T2(R=Y%DF=Y%T=40%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%T=40%W=
+OS:0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=40%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T5
+OS:(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=O
+OS:%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=
+OS:N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=Z%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%
+OS:CD=Z)
+
+Uptime guess: 0.325 days (since Mon Aug  4 04:05:10 2025)
+Network Distance: 0 hops
+TCP Sequence Prediction: Difficulty=259 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2025-08-04T06:23:24
+|_  start_date: N/A
+
+NSE: Script Post-scanning.
+Initiating NSE at 11:53
+NSOCK ERROR [118.0570s] poll_loop(): nsock_loop error 10022: An invalid argument was supplied. 
+NSE: Script Engine Scan Aborted.
+An error was thrown by the engine: A:\nmap/nse_main.lua:1078: a fatal error occurred in nsock_loop
+stack traceback:
+	[C]: in function 'nmap.socket.loop'
+	A:\nmap/nse_main.lua:1078: in upvalue 'run'
+	A:\nmap/nse_main.lua:1488: in function &lt;A:\nmap/nse_main.lua:1435&gt;
+	[C]: in ?
+Read data files from: A:\nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 118.06 seconds
+           Raw packets sent: 65616 (2.891MB) | Rcvd: 131283 (5.521MB)
+</output><host comment=""><status state="up"></status><address addr="10.95.159.136" vendor="" addrtype="ipv4"></address><hostnames></hostnames><ports><extraports count="65521" state="closed"></extraports><port portid="135" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="64"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port><port portid="137" protocol="tcp"><state state="filtered" reason="no-response" reason_ttl="0"></state><service conf="3" method="table" name="netbios-ns"></service></port><port portid="139" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="64"></state><service conf="10" method="probed" name="netbios-ssn" product="Microsoft Windows netbios-ssn"></service></port><port portid="445" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="64"></state><service conf="3" method="table" name="microsoft-ds"></service></port><port portid="5040" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="64"></state><service></service></port><port portid="6850" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="64"></state><service conf="3" method="table" name="iccrushmore"></service></port><port portid="9012" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="64"></state><service conf="10" method="probed" name="websocket" product="WebSocket++" version="0.8.2"></service></port><port portid="9013" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="64"></state><service conf="10" method="probed" name="websocket" product="WebSocket++" version="0.8.2"></service></port><port portid="49664" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="64"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port><port portid="49665" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="64"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port><port portid="49666" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="64"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port><port portid="49667" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="64"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port><port portid="49668" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="64"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port><port portid="49679" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="64"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port></ports><os><portused state="open" proto="tcp" portid="135"></portused><portused state="closed" proto="tcp" portid="1"></portused><portused state="closed" proto="udp" portid="39492"></portused><osmatch name="Microsoft Windows 10 1703 - 11 21H2" accuracy="99" line="74920"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="11" accuracy="99"></osclass></osmatch><osmatch name="Microsoft Windows 10 1607 - 11 23H2" accuracy="95" line="74791"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="11" accuracy="95"></osclass></osmatch><osmatch name="Microsoft Windows 11 21H2" accuracy="94" line="75569"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="11" accuracy="94"></osclass></osmatch><osmatch name="Microsoft Windows 7" accuracy="93" line="82627"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="7" accuracy="93"></osclass></osmatch><osmatch name="Microsoft Windows 10 2004 - Windows 11 21H2" accuracy="93" line="75272"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="11" accuracy="93"></osclass></osmatch><osmatch name="Microsoft Windows 10 1511" accuracy="93" line="74530"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="10" accuracy="93"></osclass></osmatch><osmatch name="Windows Server 2022" accuracy="93" line="82130"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="2022" accuracy="93"></osclass></osmatch><osmatch name="Microsoft Windows 10 1607" accuracy="92" line="74734"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="10" accuracy="92"></osclass></osmatch><osmatch name="Windows 11 21H2" accuracy="92" line="75587"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="11" accuracy="92"></osclass></osmatch><osmatch name="Microsoft Windows 10 1703" accuracy="92" line="74847"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="10" accuracy="92"></osclass></osmatch></os><uptime seconds="28105" lastboot="Mon Aug  4 04:05:10 2025"></uptime><tcpsequence index="259" difficulty="Good luck!" values="BEAB1F64,F4B5E314,75C35B8,5C730BFA,3902C284,AAE90E04"></tcpsequence><ipidsequence class="Incremental" values="A858,A85A,A85C,A85E,A860,A862"></ipidsequence><tcptssequence class="1000HZ" values="1ACA12B,1ACA19B,1ACA20B,1ACA27C,1ACA2EC,1ACA35C"></tcptssequence></host><runstats><finished time="1754288615" timestr="Mon Aug  4 11:53:35 2025"></finished><hosts up="1" down="0" total="1"></hosts></runstats></nmaprun>
