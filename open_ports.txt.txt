@@ -1,0 +1,5 @@
+Open Ports Discovered:
+1. 53/tcp – Domain Service
+2. 135/tcp – MSRPC
+3. 139/tcp – NetBIOS-SSN
+4. 445/tcp – Microsoft-DS
